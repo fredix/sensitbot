@@ -1,6 +1,6 @@
 # sensitbot
 
-sensitbot est un bot Telegram qui permet de piloter l'api de https://www.sensit.io
+<a href="https://t.me/sensitbot">sensitbot</a> est un bot Telegram qui permet de piloter l'api de https://www.sensit.io
 
 ## Compilation
 
