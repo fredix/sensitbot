@@ -34,7 +34,6 @@ type (
 		Mode           int    `json:"mode"`
 		ActivationDate string `json:"activation_date"`
 		LastCommDate   string `json:"last_comm_date"`
-		//Sensors    Sensors    `json:"sensors"`
 		SensorData    []SensorData `json:"sensors"`
 
 	}
