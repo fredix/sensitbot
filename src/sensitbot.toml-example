@@ -1,0 +1,35 @@
+# This is a TOML document.
+
+title = "sensitbot config file"
+
+[owner]
+name = "fredix"
+organization = "me"
+dob = 2016-09-19T22:49:00Z
+
+
+[sensitbot]
+  url = "domain.tld"
+  callback_url = "http://domain.tld/sensit/"
+  port = 3000
+  version = "0.1"
+
+[telegram]
+  token="telegram_token"
+
+[sensit]
+  client_id="client_id"
+  client_secret="client_secret"		
+  api_url="https://api.sensit.io/v2/"
+  oauth_url="https://www.sensit.io/oauth/authorize"
+  token_url="https://api.sensit.io/oauth/token"
+
+[boltdb]
+  dbfile="/usr/local/var/sensitbot/sensitbot.db"	
+
+
+[mongodb]
+  url = "mongdb_ip"
+  database = "sensit"
+  dbowner = "sensitbot"
+  dbpass = "dbpass"

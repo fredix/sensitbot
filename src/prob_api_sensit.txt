@@ -1,0 +1,59 @@
+https://api.sensit.io/v2#notifications
+PUT {endpoint}/notifications
+
+Je fait une requête PUT pour ajouter une notification sur le clic du bouton, avec ce json en spécifiant un message perso dans template :
+
+{
+  template: "` + message + `",
+  trigger: {
+    id_device: "` + device_id + `",
+    "id_sensor": "` + sensor_id + `",
+    type: "GENERIC_PUNCTUAL"
+  },
+  connector: {
+    data: "` + callbackurl + `",
+    type: "callback"
+  },
+  mode: 3
+}
+
+lors du clic je reçois bien un json, cependant data est vide, il ne contient pas mon message :
+
+{
+    "sensors": [
+        {
+            "history": [
+                {
+                    "signal_level": "good",
+                    "data": "",
+                    "date": "2016-10-28T08:47Z"
+                }
+            ],
+            "id": "7282",
+            "sensor_type": "button",
+            "config": {}
+        },
+        {
+            "history": [
+                {
+                    "signal_level": "good",
+                    "data": "27.0",
+                    "date": "2016-10-28T08:47Z"
+                }
+            ],
+            "id": "7280",
+            "sensor_type": "temperature",
+            "config": {
+                "period": 0
+            }
+        }
+    ],
+    "id": "2056",
+    "device_model": "",
+    "activation_date": "2015-08-25T19:41Z",
+    "last_comm_date": "2016-10-28T08:47Z",
+    "battery": 65,
+    "last_config_date": "0002-11-29T23:00Z",
+    "serial_number": "C6E06",
+    "mode": 3
+}
